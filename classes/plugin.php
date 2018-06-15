@@ -15,6 +15,8 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
+ * Create VideoFront api.
+ * 
  * @package   media_videofront
  * @copyright 2018 Eduardo Kraus  {@link http://videofront.com.br}
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
