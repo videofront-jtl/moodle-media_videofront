@@ -27,6 +27,13 @@ defined('MOODLE_INTERNAL') || die();
  */
 class media_videofront_plugin extends core_media_player_external {
 
+    /**
+     * List supported urls.
+     *
+     * @param array $urls
+     * @param array $options
+     * @return array
+     */
     public function list_supported_urls(array $urls, array $options = array()) {
         $result = array();
         foreach ($urls as $url) {
@@ -40,6 +47,17 @@ class media_videofront_plugin extends core_media_player_external {
         return $result;
     }
 
+    /**
+     * Embed external.
+     *
+     * @param moodle_url $url
+     * @param string $name
+     * @param int $width
+     * @param int $height
+     * @param array $options
+     * @return string
+     * @throws dml_exception
+     */
     protected function embed_external(moodle_url $url, $name, $width, $height, $options) {
         global $USER, $COURSE, $CFG;
 
@@ -63,10 +81,21 @@ class media_videofront_plugin extends core_media_player_external {
         return video::getplayer($COURSE->id, $identifier, $safetyplayer);
     }
 
+    /**
+     * Supports Text.
+     *
+     * @param array $usedextensions
+     * @return mixed|string
+     */
     public function supports($usedextensions = []) {
         return get_string('support_videoteca', 'media_videofront');
     }
 
+    /**
+     * Get embeddable markers.
+     *
+     * @return array
+     */
     public function get_embeddable_markers() {
         $markers = parent::get_embeddable_markers();
         $markers[] = 'videoteca://';

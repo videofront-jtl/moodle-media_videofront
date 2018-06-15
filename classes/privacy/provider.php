@@ -15,18 +15,28 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * @package    media_videofront
+ * @package   media_videofront
  * @copyright 2018 Eduardo Kraus  {@link http://videofront.com.br}
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 namespace media_videofront\privacy;
 
 defined('MOODLE_INTERNAL') || die();
 
+/**
+ * Class provider.
+ *
+ * @package media_videofront\privacy
+ */
 class provider implements \core_privacy\local\metadata\null_provider {
 
-    public static function get_reason() : string {
+    /**
+     * Get reason.
+     *
+     * @return string
+     */
+    public static function get_reason(): string {
         return 'privacy:metadata';
     }
 }
