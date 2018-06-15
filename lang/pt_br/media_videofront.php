@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Lang en.
+ * Lang pt_br.
  *
  * @package   media_videofront
  * @copyright 2018 Eduardo Kraus  {@link http://videofront.com.br}
