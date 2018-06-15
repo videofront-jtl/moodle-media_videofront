@@ -24,7 +24,7 @@
 
 namespace media_videofront\privacy;
 
-defined ( 'MOODLE_INTERNAL' ) || die();
+defined('MOODLE_INTERNAL') || die();
 
 /**
  * Class provider.
@@ -32,16 +32,14 @@ defined ( 'MOODLE_INTERNAL' ) || die();
  * @copyright 2018 Eduardo Kraus  {@link http://videofront.com.br}
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-class provider implements \core_privacy\local\metadata\null_provider
-{
+class provider implements \core_privacy\local\metadata\null_provider {
 
     /**
      * Get reason.
      *
      * @return string
      */
-    public static function get_reason ():string
-    {
+    public static function get_reason() {
         return 'privacy:metadata';
     }
 }
