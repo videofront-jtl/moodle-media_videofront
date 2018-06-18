@@ -51,7 +51,7 @@ if ($ADMIN->fulltree) {
         }
     }
 
-    if ($videofrontplugin !== false) {
+    if ($videofrontplugin === false) {
         $settings->add(
             new admin_setting_heading ('media_videofront/videofront',
                 new lang_string('enablevideofront', 'media_videofront'),
@@ -61,7 +61,6 @@ if ($ADMIN->fulltree) {
             new admin_setting_heading ('media_videofront/videofront',
                 new lang_string('enablevideofront', 'media_videofront'),
                 new lang_string('enabledvideofront_desc', 'media_videofront', $CFG->wwwroot)));
-
     }
 
     if ($mediaplugin == -9999) {
