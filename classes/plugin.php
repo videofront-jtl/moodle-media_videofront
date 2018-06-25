@@ -70,7 +70,7 @@ class media_videofront_plugin extends core_media_player_external {
         $config = get_config('videofront');
 
         $safetyplayer = "";
-        if ($config->safety) {
+        if ($config->safety && $config->safety != 'none') {
             $safety = $config->safety;
             if (strpos($safety, "profile") === 0) {
                 $safety = str_replace("profile_", "", $safety);
@@ -82,8 +82,10 @@ class media_videofront_plugin extends core_media_player_external {
 
         $identifier = str_replace('videoteca://', '', $url);
 
-        require($CFG->dirroot . '/mod/videofront/classes/video.php');
-        return video::getplayer($COURSE->id, $identifier, $safetyplayer);
+        if (!defined('VIDEOFRONTVIDEO')) {
+            require($CFG->dirroot . '/mod/videofront/classes/videofrontvideo.php');
+        }
+        return videofrontvideo::getplayer($COURSE->id, $identifier, $safetyplayer);
     }
 
     /**
