@@ -24,7 +24,7 @@
 
 $string['pluginname'] = 'Player VideoFront';
 $string['pluginname_help'] = 'Automatically creates player for Videoteca videos';
-$string['privacy: metadata'] = 'The Videoteca if integrated with <a href="https://www.videofront.com.br/en/LiveSparrow">Live Sparrow</a> will save data for detection of piracy.';
+$string['privacy:metadata'] = 'The Videoteca if integrated with <a href="https://www.videofront.com.br/en/LiveSparrow">Live Sparrow</a> will save data for detection of piracy.';
 $string['support_videoteca'] = 'Videoteca Videos';
 
 $string['enableauto'] = 'Enable Player VideoFront';
