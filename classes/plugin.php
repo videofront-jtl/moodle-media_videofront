@@ -85,6 +85,7 @@ class media_videofront_plugin extends core_media_player_external {
         if (!defined('VIDEOFRONTVIDEO')) {
             require($CFG->dirroot . '/mod/videofront/classes/videofrontvideo.php');
         }
+
         return videofrontvideo::getplayer($COURSE->id, $identifier, $safetyplayer);
     }
 
